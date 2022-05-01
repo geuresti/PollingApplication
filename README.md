@@ -14,7 +14,7 @@ This is a polling application that is being submitted to the 2022 IGN Code Foo I
 
 ## How to Run
 Clone it
-`git clone git@github.com......`
+`git clone https://github.com/geuresti/PollingApplication.git`
 
 Go to the project direction and run the command:
 `python manage.py runserver`
