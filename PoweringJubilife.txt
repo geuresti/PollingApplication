@@ -1,0 +1,26 @@
+Hello Professor Laventon,
+
+The Galaxy Team and I have decided that the best way to power the new power plant
+is through the use of Voltorbs, as they can cleanly produce electricity.
+
+We have to consider how many voltorbs we will need to sufficiently power the 
+village. We have to consider how much power is required for Jubilife, the 
+largest city in the Sinnoh region. 
+
+Once we have that figure, we will next need to determine rate at which a 
+Voltorb can produce electricity, as well as whether they need breaks or time 
+to recharge. 
+
+After we have that, we can determine the minimum number needed to keep the city 
+powered. The next step is sending out members of the Galaxy Team to capture 
+Voltorbs from the Sacred Plaza, the only place Voltorbs can be found.
+
+The final step would be setting up stations where Voltorbs can be placed that
+will harness their electricity and use it to power the village. Luckily, we 
+have the measurements for an average voltorb: 0.5m, 10.4kg.
+
+The powerplant will have to be built with enough of these stations to accomodate
+all the Voltorbs. Additionally, I would recommend space for extra Voltorbs
+to be housed as a contingency plan in case we ever need to replace a Voltorb or
+just to give them breaks by swapping out Voltorbs over time.
+
