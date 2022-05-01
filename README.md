@@ -18,9 +18,16 @@ Clone the repository
 `git clone https://github.com/geuresti/PollingApplication.git`
 
 Go to the project directory on your command line and type the command:
+
+`pip install -r requirements.txt` 
+
+then enter the cf22 directory and type:
+
 `python manage.py runserver`
 
 Open `http://127.0.0.1:8000/livepoll/` in your web browser (preferably Google Chrome)
+
+Play around with the website!
 
 To close the server, go to your command line and type ctrl+C
 
