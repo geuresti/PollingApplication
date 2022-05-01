@@ -1,0 +1,45 @@
+{% extends 'livepoll\base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+  <div class="content">
+    <h3>
+      Welcome to the Polls page!
+    </h3>
+    <p>
+      Here you can vote on polls uploaded by different users.
+    </p>
+    <br>
+    <p>
+      You must be logged in to vote on anything. Just click on any poll that
+      looks interesting and then pick an answer. Once you've voted, you cannot
+      vote on that poll again. Clicking on the poll link will instead take you
+      to the live results page for that poll.
+    </p>
+
+    <br>
+    <img src="{% static 'livepoll/people-talking.png' %}">
+  </div>
+  <div class="polls-container">
+
+  {% if poll_list %}
+    {% for poll in poll_list %}
+      <div class="content poll">
+        <h2>
+          <a href="{% url 'question' poll.pk %}">{{ poll }}</a>
+        </h2>
+        <p>
+          {{ poll.question }}
+        </p>
+      </div>
+    {% endfor %}
+
+  </div>
+
+  {% else %}
+    <p>No polls found</p>
+  {% endif %}
+
+{% endblock %}

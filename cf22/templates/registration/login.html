@@ -1,0 +1,34 @@
+{% extends 'livepoll/base.html' %}
+
+{% block content %}
+
+  <body>
+    {% if form.errors %}
+      <br>
+      <p> Your username and password didn't match. </p>
+    {% endif %}
+
+    <div class="post-form">
+      <form method="post" action="{% url 'login' %}">
+        <table>
+          <tr>
+            <td>{{ form.username.label_tag }}</td>
+            <td>{{ form.username }}</td>
+          </tr>
+          <tr>
+            <td>{{ form.password.label_tag }}</td>
+            <td>{{ form.password }}</td>
+          </tr>
+        </table>
+
+        {% csrf_token %}
+        <input type="submit" value="login">
+      </form>
+    </div>
+
+    <br>
+    <p> New? Click <a href="{% url 'create_account' %}">here</a> to make an account.</p>
+
+  </body>
+
+{% endblock %}

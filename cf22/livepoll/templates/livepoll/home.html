@@ -1,0 +1,53 @@
+{% extends 'livepoll\base.html' %}
+
+{% block content %}
+
+  {% load static %}
+
+  {% if message %}
+    <p> {{ message }} </p>
+  {% endif %}
+  <div class="content">
+    <div class="info-box">
+      <h3> About This Site: </h3>
+      <div>
+        <p>
+          This site was created for the CodeFoo2022 Internship as part of the
+          application process. I came across the listing for the internship with
+          only a week and a half until submissions were due. Having a full plate
+          of six classes, I wasn't sure I'd be able to handle a new project, but I
+          was really excited to work with IGN so I knew I had to at least try.
+          This is the accumulation of a lot of late night hours of work so I hope
+          you enjoy!
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="content">
+    <img src="{% static 'livepoll/code-foo.jpg' %}">
+  </div>
+
+  <div class="content">
+    <div class="info-box">
+      <h3> About Me: </h3>
+      <div>
+        <p>
+          Hey! My name is Gio and I'm a junior in college majoring in
+          computer science. I love tinkering around with different CS projects
+          so this website was really fun to work on. My experience with web-stuff
+          is limited so putting this together was a real challenge. I'm hoping to
+          work in web development and/or possible game development after college.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <address>
+      Email: gioeuresti123@gmail.com <br>
+      Github: geuresti
+    </address>
+  </footer>
+
+{% endblock content %}

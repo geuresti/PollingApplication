@@ -1,0 +1,31 @@
+{% extends 'livepoll\base.html' %}
+{% block content %}
+  {% if error %}
+    <p> {{ error }} </p>
+  {% else %}
+    <div class="poll">
+      <div class="poll-title">
+        <h2> {{ poll.question }} </h2>
+      </div>
+      <br>
+      <form action="{% url 'vote' poll.pk %}" method="post">
+         {% csrf_token %}
+         <div class="poll-options"
+           <fieldset>
+              {% for answer in answer_list %}
+              <input type="radio" name="option" id="option{{ forloop.counter }}" value="{{ answer.pk }}">
+              <label for="option{{ forloop.counter }}">
+              {{ answer.text }}
+              </label>
+              <br>
+              {% endfor %}
+           </fieldset>
+         </div>
+         <br>
+         <div class="poll-vote">
+            <input type="submit" value="Vote">
+         </div>
+      </form>
+    </div>
+  {% endif %}
+{% endblock content %}

@@ -1,0 +1,30 @@
+{% extends 'livepoll/base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+  <h2> Create A New Account </h2>
+
+  {% if messages %}
+    {% for m in messages %}
+      <br>
+      <li style=font-size:18px;>{{m}}</li>
+      <li style=font-size:18px;> Click <a href="{% url 'login' %}"> here </a> to log in. </li>
+      <br>
+    {% endfor %}
+  {% endif %}
+
+  <form method="POST">
+    {% csrf_token %}
+
+    <br>
+      <div style=width:28%;>
+        {{ form.as_p }}
+      </div>
+    <br>
+    <input type="submit" value="create" name="create">
+
+  </form>
+
+{% endblock %}

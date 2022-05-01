@@ -1,0 +1,254 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	font-family: 'Righteous';
+}
+
+.page {
+	min-width: 1000px;
+	width: 100%;
+	overflow-x: hidden;
+}
+
+#chart_div {
+	border: 2px solid black;
+	width: 704px;
+	height: 604px;
+	display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+	margin-top: 20px;
+}
+
+#polls-picture {
+	display: inline-block;
+}
+
+.post-form textarea, .post-form input {
+		color: black;
+		padding: 2px 4px;
+		right: 10px;
+		bottom: 5px;
+}
+
+.post-form h3 {
+	display: inline;
+	margin-left: 40px;
+}
+
+.post-form p {
+	color: black;
+}
+
+.base {
+	background-color: rgb(123, 189, 246);
+}
+
+img {
+	width: 100%;
+	height: auto;
+	border: 2px solid black;
+}
+
+.floatRight {
+	float: right;
+}
+
+.floatLeft {
+	float: left;
+}
+
+.note {
+	text-align: center;
+}
+
+.poll {
+	border: 2px solid black;
+	margin-top: 30px;
+	margin-left: 30px;
+	padding-top: 30px;
+	padding-left: 15px;
+	width: 50%;
+	background-color: rgb(7, 109, 198);
+}
+
+.poll-title {
+	font-size: 25px;
+	font-style: italic;
+	text-decoration: underline;
+}
+
+.poll-options {
+	margin-left: 40px;
+	font-size: 20px;
+	color: white;
+}
+
+.poll-vote {
+	padding-bottom: 10px;
+}
+
+.poll-form {
+	border: 2px solid black;
+	margin-top: 30px;
+	margin-left: 30px;
+	padding-top: 10px;
+	padding-left: 15px;
+	padding-bottom: 20px;
+	width: 30%;
+	background-color: rgb(7, 109, 198);
+}
+
+.poll-form h3 {
+	color: white;
+}
+
+.poll-new-btn {
+	padding-top: 20px;
+}
+
+.banner {
+	background: url("poll-people.png");
+	background-color: rgb(7, 109, 198);
+	background-repeat: no-repeat;
+	background-position: center left;
+	background-size: 120px;
+
+	height: 80px;
+	padding: 5px 10px 5px 10px;
+	margin: 2px 2px 1px 2px;
+	font-style: oblique;
+	border: 2px solid black;
+}
+
+.banner a {
+	font-size: 50px;
+	text-decoration: none;
+	color: black;
+	position: relative;
+	left: 115px;
+	bottom: 7px;
+}
+
+.banner p {
+	color: black;
+	position: relative;
+	left: 125px;
+	bottom: 10px;
+}
+
+.option-menu {
+	position: sticky;
+	top: 2px;
+	margin: 0px 2px;
+
+	display: grid;
+	grid-template-columns: repeat(7, 1fr);
+	grid-template-rows: 30px;
+	grid-column-gap: 1px;
+}
+
+.option {
+	border: 2px solid black;
+	background-color: rgb(7, 109, 198);
+	grid-column: span 1;
+
+	display: flex;
+	justify-content: center;
+	line-height: 15px;
+}
+
+.item:hover {
+	background-color: rgb(178, 178, 178);
+}
+
+.option a {
+  width: 100px;
+	text-align: center;
+	text-decoration: none;
+	color: white;
+	margin: 5px;
+}
+
+.content {
+	background-color: rgb(107, 118, 128);
+	border-style: solid outset outset solid;
+	border-width: 5px;
+	border-color: rgb(123, 132, 142) rgb(117, 125, 131) rgb(117, 125, 131) rgb(123, 132, 142);
+
+	display: inline;
+	float: left;
+
+	min-width: 200px;
+	max-width: 350px;
+	height: auto;
+
+	padding: 10px 15px;
+	margin: 20px 15px;
+
+}
+
+.content a {
+	font-size: 16px;
+	font-style: italic;
+	text-align: center;
+	padding-top: 10px;
+	padding-bottom: 50px;
+	padding-right: 2px;
+
+	color: black;
+
+	text-decoration-color: rgb(7, 109, 198);
+	text-decoration-style: double;
+}
+
+.info-box {
+	border-bottom-style: solid;
+	border-top-style: solid;
+	border-color: black;
+	border-width: 2px;
+	padding: 5px 10px;
+}
+
+h3 {
+	font-size: 20px;
+	color: black;
+	display: block;
+	text-align: center;
+	padding-top: 2px;
+	padding-bottom: 10px;
+}
+
+p {
+	font-size: 15px;
+	color: white;
+	font-weight: lighter;
+}
+
+.polls-container {
+	display: flex;
+  flex-wrap: wrap;
+  align-content: stretch;
+  overflow: hidden;
+}
+
+.username {
+	font-size: 20px;
+	font-style: italic;
+}
+
+.logout {
+	padding-left: 10px;
+	padding-right:15px;
+	font-size:14px;
+}
+
+footer {
+	background-color: rgb(123, 132, 142);
+	border: solid black 1px;
+	padding: 2px 4px;
+	position: fixed;
+	right: 10px;
+	bottom: 5px;
+}

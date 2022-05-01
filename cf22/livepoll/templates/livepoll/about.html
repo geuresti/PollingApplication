@@ -1,0 +1,53 @@
+{% extends 'livepoll\base.html' %}
+
+{% block content %}
+
+  {% load static %}
+
+  <!-- include image of me -->
+
+  <div class="content">
+    <div class="info-box">
+      <h3> This Website: </h3>
+
+      <p>
+        This site was made using Django, a python based framework.
+        I used ajax and Google charts to display a pie chart that
+        updates in real-time.
+      </p>
+
+    </div>
+  </div>
+
+  <div class="content">
+    <div class="info-box">
+      <h3> Previous Experiences: </h3>
+
+      <p>
+        While I've made a number of projects with Django, I've never had any
+        formal training in web development. I mostly just mess with it over the
+        summer for fun, and more recently, for a hackathon project I worked on.
+        I plan on making more Django projects in the future, as each project I
+        work on teaches me a lot more and pushes the limits of what I'm able
+        to create.
+
+        For example, this project taught me about ajax requests, javascript, and
+        helped me practice css. I also got to play around with different kinds
+        of Django views and models.
+      </p>
+
+    </div>
+  </div>
+
+  <div class="content">
+    <img src="{% static 'livepoll/construction.png' %}">
+  </div>
+
+  <footer>
+    <address>
+    Email: gioeuresti123@gmail.com <br>
+    Github: geuresti
+    </address>
+  </footer>
+
+{% endblock content %}

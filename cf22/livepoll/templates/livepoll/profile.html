@@ -1,0 +1,24 @@
+{% extends 'livepoll\base.html' %}
+
+{% block content %}
+
+  <h3> Hello, {{ user }} </h3>
+
+  <p class="note">
+    * Welcome to your profile! Here you can quickly access the results pages
+      for all of your polls as well as edit them by adding answers *
+  </p>
+
+  {% if poll_list %}
+    {% for poll in poll_list %}
+      <div class="content poll">
+        <li><a href="{% url 'live' poll.pk %}">{{ poll }}</a> - <a href="{% url 'new_answer' poll.pk %}">edit</a></li>
+      </div>
+    {% endfor %}
+  {% else %}
+    <br>
+    <p class="note">
+      * You haven't made any polls yet *
+    </p>
+  {% endif %}
+{% endblock %}

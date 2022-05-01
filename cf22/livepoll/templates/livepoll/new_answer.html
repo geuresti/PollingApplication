@@ -1,0 +1,31 @@
+{% extends 'livepoll/base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+  {% if error %}
+    <p> {{ error }} </p>
+  {% else %}
+
+    <h2>Add Answers to Your Poll</h2>
+    <form method="POST" class="answer-form">{% csrf_token %}
+      {{ form.as_p }}
+      <button type="submit" class="save btn btn-default">Add</button>
+    </form>
+
+    {% if messages %}
+      {% for m in messages %}
+        <br>
+          <p> {{m}} </p>
+        <br>
+      {% endfor %}
+    {% endif %}
+
+    {% if valid %}
+      <p> Once you're done adding answers, click <a href="{% url 'polls' %}"</a> to go check out your poll </p>
+    {% endif %}
+
+  {% endif %}
+
+{% endblock %}

@@ -1,0 +1,167 @@
+{% extends 'livepoll\base.html' %}
+
+{% block content %}
+
+  {% load static %}
+
+  <div class="polls-container">
+
+  <div class="content">
+    <div class="info-box">
+      <h3> Day 1 - Wednesday, April 20: </h3>
+
+      <p>
+        On my first day working on the project I wrote out a rough plan of
+        what to do to make this project. I also set everything up: update
+        django, create a virtual environment, name folders, etc.
+      </p>
+
+    </div>
+  </div>
+
+  <div class="content">
+    <div class="info-box">
+      <h3> Day 2 - Thursday, April 21: </h3>
+
+      <p>
+        I didn't have time to work on the website due to schoolwork.
+      </p>
+
+    </div>
+  </div>
+
+  <div class="content">
+    <div class="info-box">
+      <h3> Day 3 - Friday, April 22: </h3>
+
+      <p>
+        Today I added urls, basic views, and simple templates for the homepage,
+        polls page, and the voting page. I also looked into how to go about
+        making a page that updates in real time.
+      </p>
+
+    </div>
+  </div>
+
+  <div class="content">
+    <div class="info-box">
+      <h3> Day 4 - Saturday, April 23: </h3>
+
+      <p>
+        I didn't have time to work on the website.
+      </p>
+
+    </div>
+  </div>
+
+  <div class="content">
+    <div class="info-box">
+      <h3> Day 5 - Saturday, April 23: </h3>
+
+      <p>
+        I worked on displaying the appropriate information for each page. The
+        polls page displays a list of all the polls. The home page welcomes the
+        user and asks them to create an account (not yet implemented). I also
+        ripped some css from a previous project to give the website some
+        color and add a navigation menu at the top of the page.
+      </p>
+
+    </div>
+  </div>
+
+  <div class="content">
+    <div class="info-box">
+      <h3> Day 6 - Monday, April 25: </h3>
+
+      <p>
+        I added the ability to add accounts. The user can now create an account,
+        log in, and see their username displayed in the top right. I plan to
+        make some functionality specific to whether a user is logged in or out.
+        For example, only users who are logged in may vote on a poll. This
+        can also be used to prevent double-voting.
+      </p>
+
+    </div>
+  </div>
+
+  <div class="content">
+    <div class="info-box">
+      <h3> Day 7 - Tuesday, April 26: </h3>
+
+      <p>
+        I looked into adding different charts into a webpage. I figured out how
+        to update a single element without refreshing by manually clicking a
+        button. I used this to update a single poll result by clicking a
+        button.
+      </p>
+
+    </div>
+  </div>
+
+  <div class="content">
+    <div class="info-box">
+      <h3> Day 8 - Wednesday, April 27: </h3>
+
+      <p>
+        I figured out how to get the page to update a single poll result
+        automatically, meaning I could get rid of the button I was using
+        yesterday. After lots of experimentation, I finally got the livepoll
+        page to update the votes for all answers to a poll in real time
+        automatically.
+      </p>
+
+    </div>
+  </div>
+
+  <div class="content">
+    <div class="info-box">
+      <h3> Day 9 - Thursday, April 28: </h3>
+
+      <p>
+        I worked on ironing out some other features as well. I experimented
+        with displaying poll data with charts.js. I managed to get my chart to
+        display the appropriate data in a visually pleasing style.
+      </p>
+
+    </div>
+  </div>
+
+  <div class="content">
+    <div class="info-box">
+      <h3> Day 10 - Friday, April 29: </h3>
+
+      <p>
+        I realized charts.js wouldn't let me update it in real time so I had
+        to scrap that idea. I then found GoogleCharts and I spent the rest of
+        the day getting them to update properly and display data. This
+        involved using ajax requests to hit an endpoint and receive the current
+        vote tallies for the current poll.
+      </p>
+
+    </div>
+  </div>
+
+  <div class="content">
+    <div class="info-box">
+      <h3> Day 11 - Saturday, April 30: </h3>
+
+      <p>
+        I added a couple more features: polls can only be voted on once, only
+        the person who wrote the poll can modify it, and user profiles. These
+        changes required me to modify the data tables for Polls in order to
+        keep track of all these information.
+      </p>
+
+    </div>
+  </div>
+
+  </div>
+
+  <footer>
+    <address>
+      Email: gioeuresti123@gmail.com <br>
+      Github: geuresti
+    </address>
+  </footer>
+
+{% endblock content %}

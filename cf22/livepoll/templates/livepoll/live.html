@@ -1,0 +1,63 @@
+{% extends 'livepoll\base.html' %}
+{% block content %}
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+<div class="content">
+  <h3>
+    Welcome to the Live page!
+  </h3>
+  <p>
+   The chart to my right will update the results
+   of the poll in real time.
+  </p>
+  <br>
+  <p>
+    Users must be logged in to vote on a poll and users are
+    not allowed to vote more than once.
+  </p>
+</div>
+<div id="chart_div"></div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+<script type="text/javascript">
+   google.charts.load('current', {'packages':['corechart']});
+   google.charts.setOnLoadCallback(refreshChart);
+
+   // call refreshChart() every ~2 seconds
+   setInterval(refreshChart, 2000);
+
+   /* send a GET request to get_data url which sends back
+    * a response with the current data for the poll being
+    * displayed.
+    */
+   function refreshChart() {
+        $.ajax({
+            type:"GET",
+            url: "{% url 'get_data' %}",
+            data:{
+               poll_id: {{ poll.id }}
+        },
+        success: function(data)
+        {
+            // change data into json format
+            var parsed_data = JSON.parse(data);
+            var json_data = google.visualization.arrayToDataTable(parsed_data);
+
+            // set options for chart
+            var options = {
+                title: "{{ poll.question }}",
+                legend: 'left',
+                'width':700,
+                'height':600
+            };
+
+            // display chart with new data
+            var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
+
+            chart.draw(json_data, options);
+         },
+     });
+   };
+
+</script>
+{% endblock %}

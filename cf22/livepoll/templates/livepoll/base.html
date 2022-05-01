@@ -1,0 +1,93 @@
+<!--
+  This page is the base for all other .html pages meaning that this code
+  will extend to any page that has the " extends 'livepoll/base.html' "
+  written at the top.
+
+  This page creates a navigation menu and banner.
+-->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title> LivePoll </title>
+
+    <div class="page">
+
+    <div class="page-header">
+				{% if user.is_authenticated %}
+					<table style="float:right;">
+						<tr>
+							<td>
+                <p>Logged in as:</p>
+                <p class="username">{{user.get_username}}</p>
+              </td>
+              <td>
+                <p class="logout">
+                  <a href="{% url 'logout' %}">Log out</a>
+                </p>
+              </td>
+						</tr>
+
+					</table>
+					<a href="{% url 'home' %}" class="top-menu"></a>
+				{% endif %}
+    </div>
+
+    {% load static %}
+    <div class="base">
+        <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="{% static 'livepoll/style.css' %}">
+
+        <div class="banner">
+          <a href="{% url 'home' %}"> LIVE POLL </a>
+          <p> Make some polls! </p>
+        </div>
+
+        <div class="option-menu">
+
+          <div class="option item">
+            <a href="{% url 'home' %}"> Welcome </a>
+          </div>
+
+          <div class="option item">
+            <a href="{% url 'polls' %}"> Polls </a>
+          </div>
+
+          <div class="option item">
+            <a href="{% url 'login' %}"> Log In </a>
+          </div>
+
+          <div class="option item">
+            <a href="{% url 'new_poll' %}"> Create Poll </a>
+          </div>
+
+          <div class="option item">
+            <a href="{% url 'about' %}"> About </a>
+          </div>
+
+          <div class="option item">
+            <a href="{% url 'devlog' %}"> Devlog </a>
+          </div>
+
+          <div class="option item">
+            <a href="{% url 'profile' %}"> Profile </a>
+          </div>
+
+        </div>
+
+  </head>
+
+  <body class="base">
+    <div>
+
+      {% block content %}
+
+      {% endblock %}
+
+    </div>
+  </body>
+
+  </div>
+  </div>
+</html>

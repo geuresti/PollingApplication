@@ -1,0 +1,19 @@
+{% extends 'livepoll/base.html' %}
+
+<!-- {% load static %}  -->
+
+{% block content %}
+
+    <div class="post-form">
+      <div class="poll-form">
+        <h3>New Poll</h3>
+        <form method="POST">{% csrf_token %}
+          {{ form.as_p }}
+          <div class="poll-new-btn">
+            <button type="submit">Create Poll</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+{% endblock %}
